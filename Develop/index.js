@@ -30,7 +30,7 @@ const questions = [     // help form the inquier.js from calss and the moduel 9 
                 return false;
             }
         }
-    }
+    },
 
     {
         type: 'input',
