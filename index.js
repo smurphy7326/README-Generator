@@ -31,6 +31,7 @@ const questions = [     // help form the inquier.js from calss and the moduel 9 
             }
         }
     },
+    // In the requirements it has a table of contents but that will be used at the end of the project in the index
     {
         type: 'input',
         name: 'installation',
@@ -44,7 +45,7 @@ const questions = [     // help form the inquier.js from calss and the moduel 9 
             }
         }
     },
-    // In the requirements it has a table of contents but that will be used at the end of the project in the index
+    
     {
         type: 'input',
         name: 'userUsage',
@@ -60,8 +61,37 @@ const questions = [     // help form the inquier.js from calss and the moduel 9 
     },
 
     {
-        type
-    }
+        type: 'checkbox',
+        name: 'licences',
+        message: 'Select a licence for this project',
+        choices: [       // this was useful from teh weekly inclass assignments that were used to help with the choices task
+            // lists of licenses were taken from a list online, and placed in alphabetical order
+            'Apache-2.0', 'GNU', 'IPL-1.0', 'MIT', 'MPL-2.0'
+        ],
+        validate: licenseSelection => { // Arrow function
+            if(licenseSelection) {
+                return true;
+            } else {
+                console.log('Please choose a license.');
+                return false;
+            }
+        }
+    },
+    {
+       type: 'confirm', // This choice is more of a yes or no answer so there is no need for a if else like the other choices above. 
+       name: 'otherContributors',
+       message: 'Are there other people cotributing to this project?',
+       default: true    // for the deafault should they just hit enter, it will then ask for the username of the other contributors
+    },
+    { 
+        type: 'input',
+        name: 'githubUsernameContributors',
+        message: 'Provide the Github username for each collaborator.',
+        when: ({
+            githubUsernameContributors
+        }) => githubUsernameContributors
+    },
+
 ];
 
 // TODO: Create a function to write README file
