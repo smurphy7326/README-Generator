@@ -2,6 +2,9 @@
 const inquirer = require('inquirer');
 const fs = require('fs');
 
+const generateMarkdown = require('./utils/generateMarkdown');
+
+
 // TODO: Create an array of questions for user input
 const questions = [     // help form the inquier.js from calss and the moduel 9 class activities
     {
@@ -135,11 +138,12 @@ const questions = [     // help form the inquier.js from calss and the moduel 9 
 ];
 
 
+
 // TODO: Create a function to write README file
 // using the prompt that was taken from the cloned repo
 function writeToFile(fileName, data) {
     const {projectTitle, projectDescription, installation, userUsage, licenses, tests, github, email } = data; // used an example in class to help with this part
-    
+    const 
 }
 
 // TODO: Create a function to initialize app
