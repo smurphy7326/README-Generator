@@ -62,7 +62,7 @@ const questions = [     // help form the inquier.js from calss and the moduel 9 
 
     {
         type: 'checkbox',
-        name: 'licences',
+        name: 'licenses',
         message: 'Select a licence for this project',
         choices: [       // this was useful from teh weekly inclass assignments that were used to help with the choices task
             // lists of licenses were taken from a list online, and placed in alphabetical order
@@ -119,17 +119,36 @@ const questions = [     // help form the inquier.js from calss and the moduel 9 
     },
 
     {
-
+        type: 'input',
+        name: 'email',
+        message: 'Enter your email address:',
+        validate: emailInput => {
+            if (emailInput) {
+                return true;
+            } else {
+                console.log('Enter a valid email address.');
+                return false;
+            }
+        }
     }
 
 ];
 
+
 // TODO: Create a function to write README file
-function writeToFile(fileName, data) {}
+// using the prompt that was taken from the cloned repo
+function writeToFile(fileName, data) {
+    const {projectTitle, projectDescription, installation, userUsage, licenses, tests, github, email } = data; // used an example in class to help with this part
+    
+}
 
 // TODO: Create a function to initialize app
-function init() {}
+function init() {
+    return inquirer.prompt(questions);
+}
 
 // Function call to initialize app
 init()
-    .then();
+    .then(projectData => {
+        writeToFile
+    })
