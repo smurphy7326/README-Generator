@@ -1,7 +1,10 @@
-// Page Template for the README that is going to be generated
+// Page Template for the README that is going to be generated 
+// Page Template that was helpful from the weekly module in order to help with organization
 
 module.exports = data => {
     console.log(data); // This is the input data that people will insert into the prompts
+    // since there can be no quotes in the quotes - This is from the general README things
+    // It will pull the license, title, Description, Installation, Usage, Licenses, Instructions, and Questions
     return `
     
     ![license](https://img.shields.io/badge/licence-MIT-blue)
@@ -10,9 +13,7 @@ module.exports = data => {
     ## ${data.projectDescription}
 
     ## Installation
-    ${data.installation}
-    ## Contributions 
-    ${data.githubUsernameContributors}
+    ${data.installation} 
     ## Usage
     ${data.userUsage}
     ## Licenses

@@ -1,20 +1,16 @@
-// TODO: Create a function that returns a license badge based on which license is passed in
-// If there is no license, return an empty string
-function renderLicenseBadge(license) {}
+// This is to help with the answers and responses
 
-// TODO: Create a function that returns the license link
-// If there is no license, return an empty string
-function renderLicenseLink(license) {}
 
-// TODO: Create a function that returns the license section of README
-// If there is no license, return an empty string
-function renderLicenseSection(license) {}
-
-// TODO: Create a function to generate markdown for README
-function generateMarkdown(data) {
-  return `# ${data.title}
-
-`;
-}
-
-module.exports = generateMarkdown;
+const writeNewFile = fileContent => {
+  return new promise((resolve, reject) => { // Chained promise callback for the resolved case  and the rejected cases promise for both of them. Mozilla helped online with the result of this part
+    fs.writeNewFile('./README.md', fileContent, writeFileError => { // fs.writefile(file,body, err) is the template for the writeFile
+      if (writeFileError) {           // A simple if statement
+        reject(writeFileError);       // When if there was something to reject it rejects 
+        return;
+      }
+      resolve('File has been created!');
+    });
+  });
+};
+// this was given with a few hints from the cloned code
+module.exports = writeNewFile;

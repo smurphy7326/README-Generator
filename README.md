@@ -14,7 +14,7 @@ An application that aloows the user to generate a professional README.md file
 * [Decription](#decription)
 * [Installation](#installation)
 * [Usage](#userUsage)
-* [Technology] (#technology)
+* [Licenses] (#licenses)
 * [Contact] (#contact)
 
 ## Decription 
@@ -23,12 +23,12 @@ Generating a Professional README sounds like something that is challenging right
 
 ## Installation 
 
-For the installation, you are already on the correct page you need to be on. Just clone this repostitory and once you open up terminal just run npm init to make sure the Node Package Manager will be on your machine. 
+For the installation, you are already on the correct page you need to be on. Just clone this repostitory and once you open up terminal just run npm init to make sure the Node Package Manager will be on your machine. Also make sure to run node index to launch the generator program.
 
 ## Usage 
 When the package is installed you shoudl be able to hit node index.js and just fill in the prompts that you have to fill out. 
 
-## Technology
+## Licenses
 * MIT license
 * Node.js
 * Javascript
