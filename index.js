@@ -84,13 +84,43 @@ const questions = [     // help form the inquier.js from calss and the moduel 9 
        default: true    // for the deafault should they just hit enter, it will then ask for the username of the other contributors
     },
     { 
-        type: 'input',
+        type: 'input', // They are typing in the name of the Github usernames if you answered there are other collaborators 
         name: 'githubUsernameContributors',
         message: 'Provide the Github username for each collaborator.',
         when: ({
             githubUsernameContributors
         }) => githubUsernameContributors
     },
+    {
+        type: 'input', 
+        name: 'tests',
+        message: 'Enter any tests instructions for the project.',
+        validate: testInstructions => {
+            if (testInstructions) {
+                return true;
+            } else {
+                console.log('Enter test instructions.');
+                return false;
+            }
+        }
+    },
+    {
+        type: 'input',
+        name: 'github',
+        message: 'Enter your Github username:', 
+        validate: githubUsername => {
+            if (githubUsername) {
+                return true;
+            } else {
+                console.log('Please enter your github username.');
+                return false;
+            }
+        }
+    },
+
+    {
+
+    }
 
 ];
 
@@ -101,4 +131,5 @@ function writeToFile(fileName, data) {}
 function init() {}
 
 // Function call to initialize app
-init();
+init()
+    .then();
