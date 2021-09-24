@@ -23,7 +23,7 @@ const promptUser = () => {
         {
             type: 'input', // the type of input where you can write your own answers
             name: 'projectDescription', 
-            message: 'Write a breif message of the project.', // writes a description of the project
+            message: 'Write a brief message of the project.', // writes a description of the project
             validate: descriptionInput => {
                 if (descriptionInput) {
                     return true;
@@ -37,7 +37,7 @@ const promptUser = () => {
         {
             type: 'input',
             name: 'installation',
-            message: 'What are the steps required tpo install the project?',
+            message: 'What are the steps required to install the project?',
             validate: installInput => {
                 if (installInput) {
                     return true;
@@ -51,7 +51,7 @@ const promptUser = () => {
         {
             type: 'input',
             name: 'userUsage',
-            message: 'Provide instructions and exompales for the use of this project.',
+            message: 'Provide instructions and examples for the use of this project.',
             validate: installUserInput => {        // Arrow function
                 if (installUserInput) {
                     return true;
@@ -82,7 +82,7 @@ const promptUser = () => {
         {
         type: 'confirm', // This choice is more of a yes or no answer so there is no need for a if else like the other choices above. 
         name: 'otherContributors',
-        message: 'Are there other people cotributing to this project?',
+        message: 'Are there other people contributing to this project?',
         default: true    // for the deafault should they just hit enter, it will then ask for the username of the other contributors
         },
         { 
@@ -155,6 +155,6 @@ promptUser()
 .then()
 // helps catch errors in the code
 .catch(err => {
-    return console.lof(err);
+    return console.log(err);
 })
 
