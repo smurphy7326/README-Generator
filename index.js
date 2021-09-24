@@ -1,7 +1,7 @@
 // TODO: Include packages needed for this application
-const inquirer = require('inquirer');
-const fs = require('fs'); // when this is installed it helps to access and interact with the file system
-const generateMarkdown = require('./utils/generateMarkdown');
+const inquirer = require('inquirer'); // npm install for the inquirer to make this page work
+const writeNewFile = require('./utils/generateMarkdown');
+const newMarkdownFile = require('./src/page-template')
 
 // Question Section for the user and the README
 const promptUser = () => {
@@ -136,8 +136,8 @@ const promptUser = () => {
 
     ])
 // All of the answers at the end
-.then(userPropmtData => {
-    return userPropmtData;
+.then(userPromptData => {
+    return userPromptData;
 });
 };
 
@@ -146,11 +146,11 @@ const promptUser = () => {
 // this helps run the function
 
 promptUser()
-.then(userPromptData => {
-    return generateMarkdown(userPromptData);
+.then(promptUser => {
+    return newMarkdownFile(promptUser);
 })
-.then(pageMarkdown => {
-    return newFile(pageMarkdown);
+.then(pageTemplate => {
+    return writeNewFile(pageTemplate);
 })
 .then()
 // helps catch errors in the code
