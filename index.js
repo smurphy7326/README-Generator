@@ -1,7 +1,8 @@
 // TODO: Include packages needed for this application
 const inquirer = require('inquirer'); // npm install for the inquirer to make this page work
 const writeFile = require('./utils/generateMarkdown');
-const generateMarkdown = require('./src/page-template')
+const generateMarkdown = require('./src/page-template');
+
 
 // Question Section for the user and the README
 const promptUser = () => {
@@ -68,7 +69,7 @@ const promptUser = () => {
             message: 'Select a licence for this project',
             choices: [       // this was useful from the weekly inclass assignments that were used to help with the choices task
                 // lists of licenses were taken from a list online, and placed in alphabetical order
-                'MIT'
+                'Apache-2.0', 'MIT', "GNU"
             ],
             validate: licenseSelection => { // Arrow function
                 if(licenseSelection) {

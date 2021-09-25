@@ -28,7 +28,7 @@ module.exports = data => {
     ## Usage
     ${data.userUsage}
     ## Licenses
-    ${data.licenses}
+    ${licenseBadge(data.licenses)}
     ## Test Instructions
     ${data.tests}
 
