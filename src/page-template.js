@@ -1,16 +1,27 @@
 // Page Template for the README that is going to be generated 
 // Page Template that was helpful from the weekly module in order to help with organization
+const licenseBadge = require('./utils/license.js');
 
 module.exports = data => {
     console.log(data); // This is the input data that people will insert into the prompts
     // since there can be no quotes in the quotes - This is from the general README things
     // It will pull the license, title, Description, Installation, Usage, Licenses, Instructions, and Questions
     return `
-    
-    ![license](https://img.shields.io/badge/licence-MIT-blue)
+
+    ${data.licenses}
     # ${data.projectTitle}
 
-    ## ${data.projectDescription}
+
+    ## Description 
+     ${data.projectDescription}
+
+    ## Table of Contents
+    * [Installation] (#installation)
+    * [Usage] (#usage)
+    * [License] (#licenses)
+    * [Contributions] (#contributions)
+    * [Tests] (#tests)
+    * [Questions] (#questions)
 
     ## Installation
     ${data.installation} 

@@ -1,7 +1,7 @@
 // TODO: Include packages needed for this application
 const inquirer = require('inquirer'); // npm install for the inquirer to make this page work
 const writeFile = require('./utils/generateMarkdown');
-const newMarkdownFile = require('./src/page-template')
+const generateMarkdown = require('./src/page-template')
 
 // Question Section for the user and the README
 const promptUser = () => {
@@ -66,9 +66,9 @@ const promptUser = () => {
             type: 'checkbox',
             name: 'licenses',
             message: 'Select a licence for this project',
-            choices: [       // this was useful from teh weekly inclass assignments that were used to help with the choices task
+            choices: [       // this was useful from the weekly inclass assignments that were used to help with the choices task
                 // lists of licenses were taken from a list online, and placed in alphabetical order
-                'Apache-2.0', 'GNU', 'IPL-1.0', 'MIT', 'MPL-2.0'
+                'MIT'
             ],
             validate: licenseSelection => { // Arrow function
                 if(licenseSelection) {
@@ -83,16 +83,22 @@ const promptUser = () => {
         type: 'confirm', // This choice is more of a yes or no answer so there is no need for a if else like the other choices above. 
         name: 'otherContributors',
         message: 'Are there other people contributing to this project?',
-        default: true    // for the deafault should they just hit enter, it will then ask for the username of the other contributors
+        default: true    // for the default should they just hit enter, it will then ask for the username of the other contributors
         },
         { 
             type: 'input', // They are typing in the name of the Github usernames if you answered there are other collaborators 
             name: 'githubUsernameContributors',
             message: 'Provide the Github username for each collaborator.',
-            when: ({
-                githubUsernameContributors
-            }) => githubUsernameContributors
+            validate: githubUsername => { // Arrow function
+                if(githubUsername) {
+                    return true;
+                } else {
+                    console.log('Please write the name of the username of the collaborators.');
+                    return false;
+                }
+            }
         },
+    
         {
             type: 'input', 
             name: 'tests',
@@ -146,11 +152,17 @@ const promptUser = () => {
 // this helps run the function
 
 promptUser()
-.then(promptUser => {
-    return newMarkdownFile(promptUser);
+// This string allows the user to have it link to the page-template from the link above to allow the inforamation to be plugged in there
+.then(userPromptData => {
+    return generateMarkdown(userPromptData);
 })
-.then(pageTemplate => {
-    return writeFile(pageTemplate);
+// this is taking the new file and having it to go the generate markdown which helps writing the actual data to a new file
+.then(newPage => {
+    return writeFile(newPage);
+})
+// This shows the answers in a new sheet or new js file
+.then(newSheetAnswers => {
+    console.log(newSheetAnswers);
 })
 
 // helps catch errors in the code
