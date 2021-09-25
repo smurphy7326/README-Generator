@@ -1,6 +1,6 @@
 // TODO: Include packages needed for this application
 const inquirer = require('inquirer'); // npm install for the inquirer to make this page work
-const writeNewFile = require('./utils/generateMarkdown');
+const writeFile = require('./utils/generateMarkdown');
 const newMarkdownFile = require('./src/page-template')
 
 // Question Section for the user and the README
@@ -150,9 +150,9 @@ promptUser()
     return newMarkdownFile(promptUser);
 })
 .then(pageTemplate => {
-    return writeNewFile(pageTemplate);
+    return writeFile(pageTemplate);
 })
-.then()
+
 // helps catch errors in the code
 .catch(err => {
     return console.log(err);
