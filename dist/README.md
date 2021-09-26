@@ -1,31 +1,33 @@
 
 
 [![License:MIT](https://img.shields.io/badge/licence-MIT-blue)]
-# fdsa
+# README Generator
 
 
 ## Description 
-fdsa
+This project will help generate a professional looking README
 
 ## Table of Contents
-* [Installation](#installation)
+* [Installation Instructions](#installation)
 * [Usage](#usage)
 * [Licenses](#licenses)
-* [Contributions](#contributions)
-* [Tests](#tests)
+* [Contribution](#contributions)
+* [Tests Instructions](#tests)
 * [Questions](#questions)
 
 ## Installation
-fdsa 
+Cloning the repo to the computer, running "npm install" then typing "node index" 
 ## Usage
-fdsa
+See above
 ## Licenses
-[![License:MIT](https://img.shields.io/badge/licence-MIT-blue)]
+https://opensource.org/licenses/MIT
+## Contributions 
+whymustyoubesorude007
 ## Test Instructions
-fdsa
+Make sure you follow along with the prompts
 
 
 ### Questions or concerns?
-* [Github](https://github.com/fdsa "fdsa")
-* [Email](Email:gvera)
+* [Github](https://github.com/smurphy7326 "smurphy7326")
+* [Email](Email:smurphy7326@gmail.com)
     
