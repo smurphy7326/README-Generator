@@ -9,33 +9,33 @@ module.exports = data => {
     // It will pull the license, title, Description, Installation, Usage, Licenses, Instructions, and Questions
     return `
 
-    ${licenseBadge(data.license)}
-    # ${data.projectTitle}
+${licenseBadge(data.licenses)}
+# ${data.projectTitle}
 
 
-    ## Description 
-     ${data.projectDescription}
+## Description 
+${data.projectDescription}
 
-    ## Table of Contents
-    * [Installation] (#installation)
-    * [Usage] (#usage)
-    * [License] (#license)
-    * [Contributions] (#contributions)
-    * [Tests] (#tests)
-    * [Questions] (#questions)
+## Table of Contents
+* [Installation](#installation)
+* [Usage](#usage)
+* [Licenses](#licenses)
+* [Contributions](#contributions)
+* [Tests](#tests)
+* [Questions](#questions)
 
-    ## Installation
-    ${data.installation} 
-    ## Usage
-    ${data.userUsage}
-    ## Licenses
-    ${licenseLink(data.licenses)}
-    ## Test Instructions
-    ${data.tests}
+## Installation
+${data.installation} 
+## Usage
+${data.userUsage}
+## Licenses
+${licenseLink(data.licenses)}
+## Test Instructions
+${data.tests}
 
 
-    ### Questions or concerns?
-    * [Github](https://github.com/${data.github} "${data.github}")
-    * [Email](Email:${data.email})
+### Questions or concerns?
+* [Github](https://github.com/${data.github} "${data.github}")
+* [Email](Email:${data.email})
     `
 }

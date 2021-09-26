@@ -64,7 +64,7 @@ const promptUser = () => {
         },
 
         {
-            type: 'checkbox',
+            type: 'list',
             name: 'licenses',
             message: 'Select a licence for this project',
             choices: [       // this was useful from the weekly inclass assignments that were used to help with the choices task
