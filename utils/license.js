@@ -1,6 +1,6 @@
 // This will allow the user to make the switch on the badges from the licenses questions
 
-licenseBadge = license => {
+const licenseBadge = license => {
     switch (license) {
        case 'Apache-2.0':
         return '[![License:Apache-2.0](https://img.shields.io/badge/licence-Apache--2.0-green)]';
@@ -13,7 +13,7 @@ licenseBadge = license => {
         return '';
 }}
 
-licenseLink = license => {
+const licenseLink = license => {
     switch (license) {
         case 'Apache2-0':
             return 'https://www.apache.org/licenses/LICENSE-2.0';

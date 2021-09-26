@@ -1,6 +1,6 @@
 // Page Template for the README that is going to be generated 
 // Page Template that was helpful from the weekly module in order to help with organization
-const licenseBadge = require('./utils/license.js');
+const licenseBadge = require('../utils/license.js');
 
 module.exports = data => {
     console.log(data); // This is the input data that people will insert into the prompts
@@ -8,7 +8,7 @@ module.exports = data => {
     // It will pull the license, title, Description, Installation, Usage, Licenses, Instructions, and Questions
     return `
 
-    ${data.licenses}
+    ${licenseBadge(data.license)}
     # ${data.projectTitle}
 
 
@@ -18,7 +18,7 @@ module.exports = data => {
     ## Table of Contents
     * [Installation] (#installation)
     * [Usage] (#usage)
-    * [License] (#licenses)
+    * [License] (#license)
     * [Contributions] (#contributions)
     * [Tests] (#tests)
     * [Questions] (#questions)
@@ -28,7 +28,7 @@ module.exports = data => {
     ## Usage
     ${data.userUsage}
     ## Licenses
-    ${licenseBadge(data.licenses)}
+    ${licenseLink(data.licenses)}
     ## Test Instructions
     ${data.tests}
 
