@@ -26,4 +26,4 @@ const licenseLink = license => {
     }
 }
 
-module.exports = {licenseBadge, licenseLink};
+module.exports = licenseBadge, licenseLink;

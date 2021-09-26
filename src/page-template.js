@@ -1,6 +1,7 @@
 // Page Template for the README that is going to be generated 
 // Page Template that was helpful from the weekly module in order to help with organization
 const licenseBadge = require('../utils/license.js');
+const licenseLink = require('../utils/license.js');
 
 module.exports = data => {
     console.log(data); // This is the input data that people will insert into the prompts

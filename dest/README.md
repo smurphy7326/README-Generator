@@ -1,6 +1,6 @@
 
 
-    ![license](https://img.shields.io/badge/licence-MIT-blue)
+    
     # f
 
 
@@ -10,7 +10,7 @@
     ## Table of Contents
     * [Installation] (#installation)
     * [Usage] (#usage)
-    * [License] (#licenses)
+    * [License] (#license)
     * [Contributions] (#contributions)
     * [Tests] (#tests)
     * [Questions] (#questions)
@@ -20,12 +20,12 @@
     ## Usage
     f
     ## Licenses
-    MIT
+    
     ## Test Instructions
-    fdsaj\
+    n
 
 
     ### Questions or concerns?
-    * [Github](https://github.com/f "f")
-    * [Email](Email:f)
+    * [Github](https://github.com/n "n")
+    * [Email](Email:n)
     
