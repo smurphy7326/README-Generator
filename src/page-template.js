@@ -21,7 +21,7 @@ ${data.projectDescription}
 * [Usage](#usage)
 * [Licenses](#licenses)
 * [Contribution](#contributions)
-* [Tests Instructions](#tests)
+* [Test](#test)
 * [Questions](#questions)
 
 ## Installation
@@ -32,12 +32,12 @@ ${data.userUsage}
 ${license.licenseLink(data.licenses)}
 ## Contributions 
 ${data.githubUsernameContributors}
-## Test Instructions
+## Test
 ${data.tests}
 
 
 ### Questions or concerns?
 * [Github](https://github.com/${data.github} "${data.github}")
-* [Email](Email:${data.email})
+* [Email](${data.email})
     `
 }
