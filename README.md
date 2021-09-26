@@ -6,9 +6,15 @@ This README.md generator uses node.js and the inquirer NPM package to ask questi
 
 With this application feel free to look at this quick b=video to help get started. 
 
-![image]
+Terminal 
 
-![image]
+![image](./assets/images/terminal-readme-generator.jpg)
+
+VS Code terminal
+![image](./assets/images/vscode-terminal-info.jpg)
+
+VS Code Preview
+![image](./assets/images/preview-README-vscode.jpg)
 
 
 ## Table of Contents
